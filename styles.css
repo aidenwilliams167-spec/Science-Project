@@ -49,70 +49,19 @@ a:link{
 }
 
 
-.current-page{
+.current-page, current-page-two, current-page-three, current-page-four, current-page-five{
  position: relative;
 }
 
-
-
-
-
-.current-page:hover::after{
+.current-page:hover::after, .current-page-two:hover::after, .current-page-three:hover::after, .current-page-four:hover::after, .current-page:hover::after{
 opacity: 1;
 transition-delay: 1s;
 }
 
 
-.current-page-two{
- position: relative;
-}
-
-
-
-.current-page-two:hover::after{
- opacity: 1;
-transition-delay: 1s;
-}
-
-
-.current-page-three{
- position: relative;
-}
-
-
-
-
-
-.current-page-three:hover::after{
- opacity: 1;
-transition-delay: 1s;
-}
-
-.current-page-four{
- position: relative;
-}
-
-
-
-.current-page-four:hover::after{
- opacity: 1;
- transition-delay: 1s;
-}
-
-.current-page-five{
- position: relative;
-}
-
-
-
-.current-page-five:hover::after{
- opacity: 1;
- transition-delay: 1s;
-}
-
 .current-page::after, .current-page-two::after, .current-page-three::after, .current-page-four::after, .current-page-five::after{
     content: "(This is the current page)";
-    left: 15px
+    left: 20px
    
     width: max-content;
     max-width: 200px;
