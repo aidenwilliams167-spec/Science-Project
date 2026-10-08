@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+
+<html>
+ <head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Learning the Scientific Method with PaperRockects</title>
+  <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+   <nav>
+    
+      
+      <p class="style-e1"><a href="index.html">Driving Question</a></p>
+      <p class="style-e2"><a href="hypothesis.html" >Hypothesis</a></p>
+      <p class="style-e3"><a href="main.html">Material</a></p>
+      <p class="style-e4"><a href="testing.html">Experiment</a></p>
+      <p class="style-e5"><a href="result.html" class="current-page-five">Result</a></p>
+   </nav>
+  
+   <div>
+   <h1>Our End Results</h1>
+   <p></p>
+    
+   </div>
+
+
+   <script>
+function confetti() {
+    for (let i = 0; i < 100; i++) {
+        let piece = document.createElement("div");
+
+        piece.style.position = "fixed";
+        piece.style.width = "10px";
+        piece.style.height = "10px";
+        piece.style.backgroundColor =
+            ["pink", "yellow", "blue", "green", "purple", "orange"][Math.floor(Math.random() * 6)];
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.top = "-10px";
+        piece.style.zIndex = "9999";
+
+        document.body.appendChild(piece);
+
+        let fall = piece.animate(
+            [
+                { transform: "translateY(0) rotate(0deg)" },
+                { transform: "translateY(100vh) rotate(720deg)" }
+            ],
+            {
+                duration: 2000 + Math.random() * 2000,
+                easing: "ease-out"
+            }
+        );
+
+        fall.onfinish = () => piece.remove();
+    }
+}
+</script>
+
+   <button onclick="confetti()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; font-size: 16px;">This took forever!</button>
+ </body>
+</html>
