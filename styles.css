@@ -111,8 +111,8 @@ transition-delay: 1s;
 }
 
 .current-page::after, .current-page-two::after, .current-page-three::after, .current-page-four::after, .current-page-five::after{
-    content: "This is the current page";
-  
+    content: "(This is the current page)";
+    left: 15px
    
     width: max-content;
     max-width: 200px;
