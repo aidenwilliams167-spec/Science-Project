@@ -7,92 +7,34 @@ height: 0;
 
 
 nav{
- border-style: solid;
- border-width: 10px;
- background-color: rgba(242, 242, 217, 0.513);
- border-color: rgb(169, 224, 135); 
- text-align: center;
- font-size: 25px;
- margin-left: 20px;
- margin-right: 20px;
- margin-top: 20px;
- height: 6em;
- border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:12px;
+    border: 10px solid black;
+    background-color: rgb(232, 243, 247);
+    border-radius: 30px;
+    padding: 16px;
+    margin: 20px;
+    height: auto;
  font-weight: bold;
  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-
-.style-b1, .style-a1, .style-c1, .style-d1, .style-e1{
- position: relative;
-  margin-left: 15px;
- border-color: black;
- border-width: 4px;
- border-style: solid;
- width: 28%;
- top: 10px;
- border-radius: 10px;
- font-size: 37px;
+nav p{
+    margin: 0;
+    position: static;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-
-.style-b2, .style-a2, .style-c2, .style-d2, .style-e2{
- position: relative;
-
-
- margin-left: -35%;
- bottom: 80px;
- left: 64%;
- border-color: black;
- border-width: 4px;
- border-style: solid;
- width: 19%;
- border-radius: 10px;
- font-size: 37px;
-}
-
-
-
-
-.style-b3, .style-a3, .style-c3, .style-d3, .style-e3{
-
-
- position: relative;
-
-
- margin-left: 48%;
- bottom: 113%;
- border-color: black;
- border-width: 4px;
- border-style: solid;
- width: 18%;
- border-radius: 10px;
- font-size: 37px;
- }
-
-.style-b4, .style-a4, .style-c4, .style-d4, .style-e4{
- position: relative;
- margin-left: 66%;
- bottom: 173%;
- border-color: black;
- border-width: 4px;
- border-style: solid;
- width: 18%;
- border-radius: 10px;
- font-size: 37px;
-}
-
-.style-b5, .style-a5, .style-c5, .style-d5, .style-e5{
- position: relative;
- margin-left: 85%;
- bottom: 233%;
- border-color: black;
- border-width: 4px;
- border-style: solid;
- width: 15%;
- border-radius: 10px;
- font-size: 37px;
-}
 
 
 a:visited{
@@ -112,22 +54,7 @@ a:link{
 }
 
 
-.current-page::after{
-content: "This is the current page";
-position: absolute;
-left: 0px;
-bottom: 44px;
-width: 159%;
-border-width: 10px;
-font-size: 23px;
-background: gray;
-color: white;
-padding: 8px;
-border-radius: 5px;
-opacity: 0;
-pointer-events: none;
-transition: 0.3s;
-}
+
 
 
 .current-page:hover::after{
@@ -139,25 +66,7 @@ transition-delay: 1s;
 .current-page-two{
  position: relative;
 }
-.current-page-two::after{
 
-
-  content: "This is the current page";
-position: absolute;
-left: 0px;
-right: 0px;
-bottom: 44px;
-width: 129%;
-border-width: 10px;
-font-size: 23px;
-background: gray;
-color: white;
-padding: 8px;
-border-radius: 5px;
-opacity: 0;
-pointer-events: none;
-transition: 0.3s;
-}
 
 
 .current-page-two:hover::after{
@@ -171,23 +80,7 @@ transition-delay: 1s;
 }
 
 
-.current-page-three::after{
-  content: "This is the current page";
-position: absolute;
-left: 0px;
-right: 0px;
-bottom: 44px;
-width: 119%;
-border-width: 10px;
-font-size: 23px;
-background: gray;
-color: white;
-padding: 8px;
-border-radius: 5px;
-opacity: 0;
-pointer-events: none;
-transition: 0.3s;
-}
+
 
 
 .current-page-three:hover::after{
@@ -199,24 +92,7 @@ transition-delay: 1s;
  position: relative;
 }
 
-.current-page-four::after{
-  content: "This is the current page";
-  
-  position: absolute;
-left: 0px;
-right: 0px;
-bottom: 44px;
-width: 119%;
-border-width: 10px;
-font-size: 23px;
-background: gray;
-color: white;
-padding: 8px;
-border-radius: 5px;
-opacity: 0;
-pointer-events: none;
-transition: 0.3s;
-}
+
 
 .current-page-four:hover::after{
  opacity: 1;
@@ -227,28 +103,25 @@ transition: 0.3s;
  position: relative;
 }
 
-.current-page-five::after{
-  content: "This is the current page";
-  
-   position: absolute;
-left: 0px;
-right: 0px;
-bottom: 44px;
-width: 119%;
-border-width: 10px;
-font-size: 23px;
-background: gray;
-color: white;
-padding: 8px;
-border-radius: 5px;
-opacity: 0;
-pointer-events: none;
-transition: 0.3s;
-}
+
 
 .current-page-five:hover::after{
  opacity: 1;
  transition-delay: 1s;
+}
+
+.current-page::after, .current-page-two::after, .current-page-three::after, .current-page-four::after, .current-page-five::after{
+    content: "This is the current page";
+  
+   
+    width: max-content;
+    max-width: 200px;
+    box-sizing: border-box;
+    white-space: normal;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+
 }
 
 h1, p{
@@ -275,10 +148,10 @@ a:hover{
 
 
 img{
- width: 49%;
- height: 15em;
+ max-width: 100%;
+ height: auto;
  border-style: solid;
- border-width: 3px;
+ box-sizing: border-box;
  border-color: black;
 }
 
@@ -307,9 +180,10 @@ img{
 
 .paper-rocket{
  width: 30%;
- height: 20em;
+ max-width: 100%;
+ height: auto;
+ box-sizing: border-box;
  border-style: solid;
- border-width: 3px;
  border-color: black;
 }
 
@@ -329,4 +203,58 @@ button {
 
 button:hover {
     transform: scale(1.05);
+}
+
+.video-container {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16/9;
+    margin: 20px auto;
+}
+
+video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    nav {
+        margin: 10px;
+        padding: 10px;
+        gap: 8px;
+    }
+    nav p {
+        font-size: 14px;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    img,
+    .paper-rocket {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .hypothesis-style {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    button {
+        position: fixed;
+        left: auto;
+        top: auto;
+        right: 15px;
+        bottom: 15px;
+        width: auto;
+        height: auto;
+        max-width: calc(100% - 30px);
+        font-size: 14px;
+        padding: 12px;
+    }
 }
